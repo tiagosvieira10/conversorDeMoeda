@@ -21,8 +21,6 @@ body{
 }
 
 main{
-    width: 80rem;
-    height: 69.2rem;
     padding: 6.4rem 8.0rem;
     background: #FFFFFF;
     box-shadow: .0rem .4rem 3.2rem rgba(15, 23, 42, 0.15);
@@ -38,6 +36,9 @@ button{
     background-color:#FFFFFF ;
     border: none;
     cursor: pointer;
+}
+button:hover{
+    transform: scale(1.5);
 }
 .wrapper{
     margin-top: 1.6rem;
@@ -137,8 +138,8 @@ li:hover{
     background-color: var(--bg-hover)
 }
 
-.cambio .wrapper{
-    margin-top: 2.4rem;
-    width: 64.0rem;
+.cambio .wrapper #chart{
+    width: 64rem;
     height: 40.4rem;
+    margin-top: 2.4rem;
 }
