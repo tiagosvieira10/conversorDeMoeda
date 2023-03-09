@@ -34,11 +34,17 @@ section h2{
     font-size: 2.0rem;
     line-height: 2.4rem;
 }
-.conversor .wrapper{
+button{
+    background-color:#FFFFFF ;
+    border: none;
+    cursor: pointer;
+}
+.wrapper{
     margin-top: 1.6rem;
     margin-bottom: 2.4rem;
     display: flex;
     gap: 1.6rem;
+    align-items: center;
 }
 .money-wrapper{
     background: white;
@@ -46,13 +52,93 @@ section h2{
     border-radius: .8rem;
     width:27rem;
     padding:1.6rem;
+    display: flex;
+    align-items: center;
+    position: relative;
 }
-.money-wrapper:hover{
-    outline:.25rem solid #7C3AED;    ;
+.money-wrapper:hover,
+.money-wrapper:has(:focus){
+    outline:.25rem solid #7C3AED;
+}
+
+.amount {
+    border: 0;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    width: 50%;
+}
+
+.amount:focus{
+    outline: 0;
+}
+
+.dropdow{
+    --bg-hover:#EDE9FE;
+    width: 13rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 5.6rem;
+    overflow: hidden;
+}
+
+.dropdow:hover{
+    height: fit-content;
+    overflow: initial;
+}
+
+.selected{
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    padding: 1.6rem;
+    border-radius: 0 0.8rem 0.8rem 0;
+    cursor: pointer;
+}
+.selected::before{
+    content: "";
+    height: 2.4rem;
+    width: 0rem;
+    background-color:#94A3B8 ;
+    border: 1px solid #94A3B8;
+    position: absolute;
+    left: 0;
+}
+.selected::after{
+    content: "";
+    width:2.4rem;
+    height: 2.4rem;
+    background: url(./img/majesticons_chevron-down-line.svg)no-repeat;
+}
+
+.selected:hover {
+    background-color: var(--bg-hover);
+}
+
+.fi.fis{
+   font-size: 2.4rem;
+   border-radius: 50%; 
+}
+ul{
+    list-style: none;
+    box-shadow: 0px 4px 16px rgba(15, 23, 42, 0.15);
+    border-radius: 8px;
+    padding: 0;
+    width: 16rem;
+    max-height: 17rem;
+    margin-top: .8rem;
+    overflow-y: scroll;
+}
+li{
+    padding: 1.2rem 1.6rem;
+    cursor: pointer;
+}
+li:hover{
+    background-color: var(--bg-hover)
 }
 
 .cambio .wrapper{
+    margin-top: 2.4rem;
     width: 64.0rem;
     height: 40.4rem;
-    margin-top: 2.4rem;
 }
